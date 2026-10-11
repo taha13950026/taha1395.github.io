@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تقدیم به بابا</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 100px; background-color: #f4f4f4; }
+        .box { background: white; padding: 30px; border-radius: 15px; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; cursor: pointer; border: none; border-radius: 5px; }
+        .yes { background-color: #4CAF50; color: white; }
+        .no { background-color: #f44336; color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="box" id="mainDiv">
+        <h1>سلام بابا، خوبی؟</h1>
+        <p>من بالاخره تونستم اولین سایتم رو بسازم!</p>
+        <p>به نظرت خوب شده؟</p>
+        <button class="yes" onclick="answer('yes')">آره، عالیه!</button>
+        <button class="no" onclick="answer('no')">نه، جای کار داره</button>
+    </div>
+
+    <script>
+        function answer(res) {
+            let div = document.getElementById('mainDiv');
+            if(res === 'yes') {
+                div.innerHTML = "<h1>دمت گرم بابا!</h1><p>خوشحالم که خوشت اومد!</p>";
+            } else {
+                div.innerHTML = "<h1>عه؟ بابا واقعاً؟</h1><p>اشکال نداره، قول میدم روز به روز بهترش کنم!</p><button onclick='location.reload()'>دوباره فکر کن</button>";
+            }
+        }
+    </script>
+</body>
+</html>
